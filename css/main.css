@@ -191,7 +191,11 @@ header{
 .banner{
 	overflow:hidden ;
 	margin:0 auto !important;
-	background:#CACACA;
+	background: url(../images/header-image/image02.png);
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .patternOverlay {
 	background:#372d38;
@@ -204,14 +208,6 @@ header{
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 	filter: alpha(opacity=80);
 	opacity: 0.8;
-}
-
-.banner {
-	background: url(../images/header-image/image02.png);
-	background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .bannerText{
