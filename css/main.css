@@ -206,7 +206,7 @@ header{
 	opacity: 0.8;
 }
 
-#banner {
+.banner {
 	background: url(../images/header-image/image02.png);
 	background-attachment: fixed;
     background-position: center;
@@ -1192,7 +1192,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 	.navbar-inverse .navbar-toggle.active {
 		background-color:#11141c;
 	}
-	#banner {
+	.banner {
 		background-attachment: scroll;
 	}
 }
