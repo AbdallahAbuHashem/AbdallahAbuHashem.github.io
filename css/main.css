@@ -206,6 +206,14 @@ header{
 	opacity: 0.8;
 }
 
+#banner {
+	background: url(../images/header-image/image02.png);
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .bannerText{
 	width:100%;
 	position:absolute ;
@@ -1183,6 +1191,9 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 	}
 	.navbar-inverse .navbar-toggle.active {
 		background-color:#11141c;
+	}
+	#banner {
+		background-attachment: scroll;
 	}
 }
 
