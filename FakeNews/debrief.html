@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav style="background-color: #ffffff">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center" style="color: #ee3a43; font-family: 'ImWunderland-bold' !important; font-size: 36px">Logo</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li ><a style="color: #ee3a43; font-family: 'ImWunderland-bold' !important; font-size: 24px">Reset</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div id="wtf">
+      <div id="firstPage">
+        <div id="firstPageContent">
+          <h1>Fake News Vs. Knowledge</h1>
+          <p>Welcome to our fake news scrollyteller. The goal of this website is to explore how people interact with fake news, and the role of knowledge in the process. We will first begin by telling a story based on real data. Get whatever your scrolling device is ready</p>
+        </div>
+        <div id="scrollDown">
+          <img id="downArrow" src="./arrow_down.png"/>
+          <p>Scroll down to begin</p>
+        </div>
+      </div>
+      <div>
+        <h3>Fake News on The Social Network</h3>
+        <p class="intro">This is a story of a society where people have an issue with fake news. Through this story we illustrate the danger of fake news, and its effect on creating echo chambers.</p>
+      </div>
+      <section id='scroll1'>
+        <div class='scroll__graphic1' id="graphic1">
+          <div class='chartScroll1' id="chartScroll1">
+            <div id="chart1"></div>
+          </div>
+        </div>
+        <div class='scroll__text1'>
+          <div class='step1' data-step='1'>
+            <p>People in our society are split into republicans, democrats and neutral. All people are wonderful and equal in this society.</p>
+          </div>
+          <div class='step1' data-step='2'>
+            <p>We start off by introducing Green, a neutral character in the society</p>
+          </div>
+          <div class='step1' data-step='3'>
+            <p>Green decides to read the news.</p>
+          </div>
+          <div class='step1' data-step='4'>
+            <p>However, one of the articles that catches his eye is fake. The fake news is in favor of the democrats. Green has no way of checking the news.</p>
+          </div>
+          <div class='step1' data-step='5'>
+            <p>So Green does not know whether to believe it or not.</p>
+          </div>
+          <div class='step1' data-step='6'>
+            <p>Regardless, they decide to share it with their friends on the social media.</p>
+          </div>
+          <div class='step1' data-step='7'>
+            <p>Initially, all of Green's friends decide to share the news causing it to spread.</p>
+          </div>
+          <div class='step1' data-step='8'>
+            <p>Democrats like the news that they got from Green, and keep sharing it among them.</p>
+          </div>
+          <div class='step1' data-step='9'>
+            <p>Republicans do not like, and as a result they stop sharing it.</p>
+          </div>
+          <div class='step1' data-step='10'>
+            <p>This leads to the spread of fake news that agree with each group between that group. The inter-connections within the group will get stronger, while the connections with the opposing party will weaken. Echo chambers will be created.</p>
+          </div>
+          <div>
+            <h3>Fake News: If only People Knew...</h3>
+            <p class="intro">It is quite common (and natural) to think that people share fake news out of ignorance, or that they do believe in what they share. However, multiple studies have shown that the majority of people are well-informed, and can recognize fake news. What is the issue then? Here, we visualize the data from a study that was done arounf the 2016 elections and fake news. The study then leads us to conclusions about why fake news is so prominent nowadays, and what are the effects.</p>
+          </div>
+        </div>
+      </section>
+
+      <div>
+        <h3>Fake News: If only People Knew...</h3>
+        <p class="intro">It is quite common (and natural) to think that people share fake news out of ignorance, or that they do believe in what they share. However, multiple studies have shown that the majority of people are well-informed, and can recognize fake news. What is the issue then? Here, we visualize the data from a study that was done arounf the 2016 elections and fake news. The study then leads us to conclusions about why fake news is so prominent nowadays, and what are the effects.</p>
+      </div>
+      <section id='scroll'>
+        <div class='scroll__graphic' id="graphic">
+          <div class='chartScroll'>
+            <div class="chart"></div>
+          </div>
+        </div>
+        <div class='scroll__text'>
+          <div class='step' data-step='1'>
+            <p>First, this is the data for Hillary Clinton supporters. On the horizontal axis, we can see people's general knowledge about politics. On the vertical axis is the content of the fake news; either pro-Hillary or pro-Trump. We can notice that as knowledge increases, fake news consumption does NOT decrease.</p>
+          </div>
+          <div class='step' data-step='2'>
+            <p>Second, this is the data for Donald Trump supporters. The axes here are the same as previously - horizontal axis for people's knowledge and vertical axis for the content of the news. Although the distribution is different here, we notice that in the case of pro-Trump news, fake news consumption does NOT decrease as knowledge increases.</p>
+          </div>
+          <div class='step' data-step='3'>
+            <p>The conclusion we reach here is that knowledge is not necessarily a good defense mechanism against people's consumption and sharing of fake news. In another study, it was found that people are more likely to share fake news that goes along with their political belief. These results show that passion and prejudice account for a lot more than some might expect.</p>
+          </div>
+        </div>
+      </section>
+      <div>
+        
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src='https://unpkg.com/intersection-observer'></script>
+    <script src='https://unpkg.com/scrollama'></script>
+    <script src="./scrollama.js"></script>
+    <script src="./scrollama1.js"></script>
+    <script src="./hillarytrump.js"></script>
+    <script>
+      var w = window.innerWidth;
+      var bgWidth = .8*w;
+      bgWidth -= 3;
+      var whiteSpace = bgWidth/5.0;
+      document.getElementById("wtf").style.background = "repeating-linear-gradient(to right,#ededed,#ededed 2px,#ffffff 1px,#ffffff " + whiteSpace +"px)";
+    </script>
+  </body>
+</html>
