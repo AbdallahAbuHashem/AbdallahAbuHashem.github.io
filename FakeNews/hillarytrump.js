@@ -56,7 +56,7 @@ function drawChart() {
         .attr("x", 10)
         .style("font-size", "26px")
         .style("text-anchor", "middle")
-        .text("Trust in media");
+        .text("Trust in mainstream media");
         
                             // x axis and label
     svg.append("g")
@@ -72,7 +72,7 @@ function drawChart() {
 
     var path = svg.append("path")
       .attr("d", line(data))
-      .attr("stroke", "#35c6a9aa")
+      .attr("stroke", "#5942f4aa")
       .attr("stroke-width", "3")
       .attr("fill", "none");
 
@@ -126,7 +126,7 @@ function drawChart() {
       var newPoint = {};
       newPoint.value = val;
       newPoint.year = i;
-      newPoint.color = '#35c6a9';
+      newPoint.color = '#5942f4';
       dotsData.push(newPoint);
     });
 

@@ -9,9 +9,12 @@
     <div class="navbar-fixed">
       <nav style="background-color: #ffffff">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo center" style="color: #ee3a43; font-family: 'ImWunderland-bold' !important; font-size: 36px">Logo</a>
+          <a id="TopBTN" class="brand-logo center" style="color: #ee3a43; font-family: 'ImWunderland-bold' !important; font-size: 36px">Top</a>
           <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li ><a style="color: #ee3a43; font-family: 'ImWunderland-bold' !important; font-size: 24px">Reset</a></li>
+            <li><a id="SNBtn" style="color: #ee3a43; font-family: 'ImWunderland-bold' !important; font-size: 24px">Story</a></li>
+            <li><a id="BBtn" style="color: #ee3a43; font-family: 'ImWunderland-bold' !important; font-size: 24px">Belief</a></li>
+            <li><a id="ChBtn" style="color: #ee3a43; font-family: 'ImWunderland-bold' !important; font-size: 24px">Chambers & News</a></li>
+            <li><a id="ClBtn" style="color: #ee3a43; font-family: 'ImWunderland-bold' !important; font-size: 24px">Closing</a></li>
           </ul>
         </div>
       </nav>
@@ -19,15 +22,15 @@
     <div id="wtf">
       <div id="firstPage">
         <div id="firstPageContent">
-          <h1>Fake News Vs. Knowledge</h1>
-          <p>Welcome to our fake news scrollyteller. The goal of this website is to explore how people interact with fake news, and the role of knowledge in the process. We will first begin by telling a story based on real data. Get whatever your scrolling device is ready</p>
+          <h1>Fake News is Not the Problem</h1>
+          <p>Welcome to our fake news scrollyteller. The goal of this website is to explore how people's political views might affect how they see fake news. We will first begin by telling a story based on real data. Get whatever your scrolling device is ready</p>
         </div>
         <div id="scrollDown">
           <img id="downArrow" src="./arrow_down.png"/>
           <p>Scroll down to begin</p>
         </div>
       </div>
-      <div>
+      <div id="socialnetwork">
         <h3>Fake News on The Social Network</h3>
         <p class="intro">This is a story of a society where people have an issue with fake news. Through this story we illustrate the danger of fake news, and its effect on creating echo chambers.</p>
       </div>
@@ -48,16 +51,16 @@
             <p>Green decides to read the news.</p>
           </div>
           <div class='step1' data-step='4'>
-            <p>However, one of the articles that catches his eye is fake. The fake news is in favor of the democrats. Green has no way of checking the news.</p>
+            <p>However, one of the articles that catches his eye is fake. The fake news is in favor of the democrats.</p>
           </div>
           <div class='step1' data-step='5'>
-            <p>So Green does not know whether to believe it or not.</p>
+            <p>Green is a naive member of the society. They not know whether to believe it or not.</p>
           </div>
           <div class='step1' data-step='6'>
-            <p>Regardless, they decide to share it with their friends on the social media.</p>
+            <p>They like what they read, so they decide to share it with their friends on the social media.</p>
           </div>
           <div class='step1' data-step='7'>
-            <p>Initially, all of Green's friends decide to share the news causing it to spread.</p>
+            <p>Green's shared piece of news gets circulated few times, and spreads among many different people.</p>
           </div>
           <div class='step1' data-step='8'>
             <p>Democrats like the news that they got from Green, and keep sharing it among them.</p>
@@ -68,16 +71,15 @@
           <div class='step1' data-step='10'>
             <p>This leads to the spread of fake news that agree with each group between that group. The inter-connections within the group will get stronger, while the connections with the opposing party will weaken. Echo chambers will be created.</p>
           </div>
-          <div>
-            <h3>Fake News: If only People Knew...</h3>
-            <p class="intro">It is quite common (and natural) to think that people share fake news out of ignorance, or that they do believe in what they share. However, multiple studies have shown that the majority of people are well-informed, and can recognize fake news. What is the issue then? Here, we visualize the data from a study that was done arounf the 2016 elections and fake news. The study then leads us to conclusions about why fake news is so prominent nowadays, and what are the effects.</p>
-          </div>
+          
         </div>
       </section>
 
-      <div>
-        <h3>Fake News: If only People Knew...</h3>
-        <p class="intro">It is quite common (and natural) to think that people share fake news out of ignorance, or that they do believe in what they share. However, multiple studies have shown that the majority of people are well-informed, and can recognize fake news. What is the issue then? A study conducted by a Stanford professor have looked at other factors that might determine whether people believe or do not believe fake news.</p>
+      <div id="belief">
+        <h3>What affects what people believe?</h3>
+        <p class="intro">
+          A study conducted by a Stanford professor have looked at different potential factors that might determine whether people believe or do not believe fake news. Below we take a look at the strongest factor that was found in the study.
+        </p>
       </div>
       <section id='scroll'>
         <div class='scroll__graphic' id="graphic">
@@ -99,34 +101,38 @@
           </div>
         </div>
       </section>
-      <div>
+      <div id="chamber">
         <h3>My Chamber, My News</h3>
-        <p class="intro">Although the data presented thus far deal with fake news and its relation to partisanship, believing news based on political views and the echo chambers it creates have dangerous consequences on real media. As news validity becomes based on political alignment, we fear that this will lead to media delgitmization. In fact, the graph below shows the decline in people's trust in media over the last 19 years. (1997 - 2016 excluding 2006)</p>
+        <p class="intro">Although the data presented thus far deal with fake news and its relation to political views, believing news based on political views have dangerous consequences on factual news. As news validity becomes based on political alignment, we fear that this will lead to delegimization of factual news. In fact, the graph below shows the decline in people's trust in mainstream media over the last 19 years. (1997 - 2016 excluding 2006). <b>The blue is for democrats, purple is the overall and red is for republicans.</b></p>
       </div>
       <div class="chart2" id="chart2"></div>
       <div class="sidebyside">
         <div class='scroll__text2'>
           <div class='step2'>
             <div>
-            <h4>More on Media Delegitmization</h4>
+            <h4>More on News Delegitmization</h4>
               <p>
-                Another thing that helps more with the delegitmization of the media is the blur between the actual definition of fake news and how we see current "fake news". Fake news is supposed to mean that the news is not factual. Now, we have people like Donald Trump who's definition of fake news is along the lines of "I take offense with what you said". By using this definition, Trump has become a clear example of the dangerous effect of basing news' validity on agreeing with it.
+                With the decline in trust in mainstream media, viewers will seek other ways to get news. One possible outlet is social media. Since social media platforms like Facebook cater to what viewers want, users will get news that they agree with regardless of its factuality. As people consume more fake news, this will make all news look wimilar regardless of its factuality, which hurts factual news legitmiacy. <br/>
+                Another thing that delegitmizes the factual news even more is the blur between the actual definition of fake news and the mis-labeling of fake news on purpose. Fake news is supposed to mean that the news is not factual. Now, we have people like Donald Trump who's definition of fake news is along the lines of "I take offense with what you said" even when the news is factual.
               </p>
             </div>
           </div>
         </div>
         <img src="./Trump_fake.png" id="trump_fake"/>
       </div>
-      <div>
+      <div id="closing">
         <h3>Closing the Loop</h3>
         <p class="intro">
-          Media delegitmization will push people to seek other sources for news other than traditional media since it is no longer trusted. One of these possible alternatives is social media. Since social media is built on preferability, it will lead back to more and more creation of echo chambers, which closes the loop from echo chambers to delegitmization of the media and back to echo chambers as shown below.
+          As mentioned above, news could lose its legitimacy by people relying on their personal circles for news rather than mainstream media. Since social media is built on preferability, people will read more fake news that aligns with their view, and will grow their network in a way that aligns with their political view. This will reinforce the existence of echo chambers, which closes the loop from echo chambers to delegitmization of the media and back to echo chambers as shown below.
         </p>
       </div>
       <div id="final_container">
         <object style="width: 100%; height: 100%; max-height:400px; background: #00000000" type="text/html" data="./last_loop/Loop.html" id="final_loop"/>
       </div>
     </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js" type="text/javascript"></script> 
+    <script src="http://cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src='https://unpkg.com/intersection-observer'></script>
     <script src='https://unpkg.com/scrollama'></script>
@@ -134,6 +140,7 @@
     <script src="./scrollama.js"></script>
     <script src="./scrollama1.js"></script>
     <script src="./hillarytrump.js"></script>
+    <script src="./scroll.js"></script>
     <script>
       var w = window.innerWidth;
       var bgWidth = .8*w;
@@ -141,5 +148,13 @@
       var whiteSpace = bgWidth/5.0;
       document.getElementById("wtf").style.background = "repeating-linear-gradient(to right,#ededed,#ededed 2px,#ffffff 1px,#ffffff " + whiteSpace +"px)";
     </script>
+    <script type="text/javascript">
+      (function($) {
+        $(document).ready(function() {
+           $('#nav').localScroll({duration:800});
+        });
+    })(jQuery);
+
+</script>
   </body>
 </html>
