@@ -43,19 +43,15 @@
         return i === response.index;
       })
 
+      if(response.index === 1 && response.direction === 'up') {
+        return;
+      }
       // update graphic based on step
       if (response.index === 0) {
-        drawChart(true);
-      } else {
-        drawChart(false);
+        document.getElementById("chartScroll").innerHTML='<object style="width: 100%; height: 80%; background: #00000000" type="text/html" data="./align_belief/IdeologicalAlignment+Belief.html" ></object>';
       }
-      if(response.index === 1) {
-        // document.getElementById('graphic').style.top = 'auto';
-        // document.getElementById('graphic').style.bottom = 0;
-        // document.getElementById('graphic').style.position = '';
-        // chart.select('.scroll__graphic')
-        //   .style('bottom', 0)
-        //   .style('top', 'auto');
+      if (response.index === 1) {
+        document.getElementById("chartScroll").innerHTML='<object style="width: 100%; height: 80%; background: #00000000" type="text/html" data="./init_loop/Loop.html" ></object>';
       }
     }
 

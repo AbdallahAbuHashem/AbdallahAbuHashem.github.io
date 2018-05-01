@@ -77,32 +77,52 @@
 
       <div>
         <h3>Fake News: If only People Knew...</h3>
-        <p class="intro">It is quite common (and natural) to think that people share fake news out of ignorance, or that they do believe in what they share. However, multiple studies have shown that the majority of people are well-informed, and can recognize fake news. What is the issue then? Here, we visualize the data from a study that was done arounf the 2016 elections and fake news. The study then leads us to conclusions about why fake news is so prominent nowadays, and what are the effects.</p>
+        <p class="intro">It is quite common (and natural) to think that people share fake news out of ignorance, or that they do believe in what they share. However, multiple studies have shown that the majority of people are well-informed, and can recognize fake news. What is the issue then? A study conducted by a Stanford professor have looked at other factors that might determine whether people believe or do not believe fake news.</p>
       </div>
       <section id='scroll'>
         <div class='scroll__graphic' id="graphic">
-          <div class='chartScroll'>
+          <div class='chartScroll' id='chartScroll'>
             <div class="chart"></div>
           </div>
         </div>
         <div class='scroll__text'>
           <div class='step' data-step='1'>
-            <p>First, this is the data for Hillary Clinton supporters. On the horizontal axis, we can see people's general knowledge about politics. On the vertical axis is the content of the fake news; either pro-Hillary or pro-Trump. We can notice that as knowledge increases, fake news consumption does NOT decrease.</p>
+            <p>The study have found a strong correlation between alignment of fake news with personal political views and believing fake news. It found that democrats are 17.2% more likely to believe pro-Clinton fake news, and republicans are 14.7% more likely to believe pro-Trump fake news. The study have looked at other factors like age and education, and none of them had as strong correlation as political alignment.</p>
           </div>
           <div class='step' data-step='2'>
-            <p>Second, this is the data for Donald Trump supporters. The axes here are the same as previously - horizontal axis for people's knowledge and vertical axis for the content of the news. Although the distribution is different here, we notice that in the case of pro-Trump news, fake news consumption does NOT decrease as knowledge increases.</p>
+            <p>Assuming that people are only going to share news when they believe it, we will get the vicious cycle shown to the right. People agreeing with news is going to lead them to believing it, so they will share it. If they share it with others who have same political view, the cylce will continue by another person. If it was shared with someone who does not hold same political views, they will be less likely to believe and share it.</p>
           </div>
           <div class='step' data-step='3'>
-            <p>The conclusion we reach here is that knowledge is not necessarily a good defense mechanism against people's consumption and sharing of fake news. In another study, it was found that people are more likely to share fake news that goes along with their political belief. These results show that passion and prejudice account for a lot more than some might expect.</p>
+            <p>
+              Given that people are more likely to believe fake news that aligns with their political views, the sources (including friends) that share these news are more likely to be labeled as trustworthy by the viewer. On the other hand, the sources which does not share political views will be labeled as fake. The viewer will want to read from the trustworthy sources as much as possible, and will try to avoid the other sources. This creates echo chambers that are based on political views.
+            </p>
           </div>
         </div>
       </section>
       <div>
-        
+        <h3>My Chamber, My News</h3>
+        <p class="intro">Although the data presented thus far deal with fake news and its relation to partisanship, believing news based on political views and the echo chambers it creates have dangerous consequences on real media. As news validity becomes based on political alignment, we fear that this will lead to media delgitmization. In fact, the graph below shows the decline in people's trust in media over the last 19 years. (1997 - 2016 excluding 2006)</p>
       </div>
+      <div class="chart2" id="chart2"></div>
+      <div class="sidebyside">
+        <div class='scroll__text2'>
+          <div class='step2'>
+            <div>
+            <h4>More on News Delegitmization</h4>
+              <p>
+                Another thing that helps more with the delegitmization of the media is the blur between the actual definition of fake news and how we see current "fake news". Fake news is supposed to mean that the news is not factual. Now, we have people like Donald Trump who's definition of fake news is along the lines of "I take offense with what you said". By using this definition, Trump has become a clear example of the dangerous effect of basing news' validity on agreeing with it.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img src="./Trump_fake.png" id="trump_fake"/>
+      </div>
+      
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src='https://unpkg.com/intersection-observer'></script>
     <script src='https://unpkg.com/scrollama'></script>
+    <script src="./waypoints/lib/noframework.waypoints.min.js"></script>
     <script src="./scrollama.js"></script>
     <script src="./scrollama1.js"></script>
     <script src="./hillarytrump.js"></script>

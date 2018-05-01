@@ -26,7 +26,7 @@
 
     /* scrollama */
 
-    #scroll, #scroll1 {
+    #scroll, #scroll1, #scroll2 {
       position: relative;
       /*display: flex;*/
       background: #00000000;
@@ -35,7 +35,7 @@
       /*border-bottom: 1px dashed #000;*/
     }
 
-    .scroll__graphic, .scroll__graphic1 {
+    .scroll__graphic, .scroll__graphic1, .scroll__graphic2 {
       position: absolute;
       top: 0;
       left: 0;
@@ -46,12 +46,12 @@
       transform: translate3d(0, 0, 0);
     }
 
-    .scroll__graphic.is-fixed, .scroll__graphic1.is-fixed {
+    .scroll__graphic.is-fixed, .scroll__graphic1.is-fixed, .scroll__graphic2.is-fixed {
       position: fixed;
       left: 10%;
     }
 
-    .scroll__graphic.is-bottom, .scroll__graphic1.is-bottom {
+    .scroll__graphic.is-bottom, .scroll__graphic1.is-bottom, .scroll__graphic2.is-bottom {
       bottom: 0;
       top: auto;
     }
@@ -73,10 +73,27 @@
       width: 40%;
     }
 
-    .chartScroll {
+    .chartScroll2 {
       position: absolute;
       right: 1rem;
       top: 35%;
+      -moz-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    .scroll__text2 {
+      position: relative;
+      padding: 1 0rem;
+      float: left;
+      max-width: 30rem;
+      width: 40%;
+    }
+
+    .chartScroll {
+      position: absolute;
+      right: 1rem;
+      top: 45%;
       -moz-transform: translateY(-50%);
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
@@ -91,7 +108,16 @@
       transform: translateY(-50%);
     }
 
-    .scroll__text, .scroll__text1 {
+    .chartScroll2 {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      -moz-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    .scroll__text, .scroll__text1, .scroll__text2 {
       position: relative;
       padding: 1 0rem;
       max-width: 30rem;
@@ -120,6 +146,18 @@
 
     }
 
+    .step2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem auto;
+      /*background-color: #fffff6;*/
+      /*border: 1px solid #333;*/
+      color: black;
+      /*font-family: 'ImWunderland-bold' !important;*/
+
+    }
+
     .step.is-active, .step1.is-active {
       background-color: #fffff6;
       border: 1px solid #333;
@@ -137,6 +175,12 @@
       text-align: center;
       padding: 1rem;
       font-size: 2rem;
+    }
+
+    .step2 p {
+      text-align: center;
+      padding: 1rem;
+      font-size: 1.7rem;
     }
 
     #outro {
@@ -166,6 +210,26 @@
       }
 
       .chart text {
+        font: 20px 'ImWunderland-bold';
+      }
+
+      .chart2 rect {
+        fill: steelblue;
+      }
+
+      .chart2 .rectM {
+        stroke: green;
+        stroke-width: 1;
+        fill: green;
+        fill-opacity: .2;
+      }
+
+      .chart2 .rectM:hover {
+        fill: green;
+        fill-opacity: .5;
+      }
+
+      .chart2 text {
         font: 20px 'ImWunderland-bold';
       }
 
@@ -226,6 +290,11 @@
         text-align: center;
       }
 
+      h4 {
+        font-family: 'ImWunderland-bold' !important;
+        text-align: center;
+      }
+
       .intro {
         text-align: center;
         font-size: 26px;
@@ -270,4 +339,16 @@
       #downArrow {
         width: 40px;
         height: 40px;
+      }
+
+      .sidebyside {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      #trump_fake {
+        width: 40%;
       }

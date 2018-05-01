@@ -1,206 +1,162 @@
-function pushData(clintonHighlighted) {
-        var data =[];
-        if (clintonHighlighted) {
-          data.push({x: 1,y: 1,c: "#4377d8",size: 10,});
-          data.push({x: 2,y: 1,c: "#4377d8",size: 15,});
-          data.push({x: 3,y: 1,c: "#4377d8",size: 25,});
-          data.push({x: 1,y: 2,c: "#008CBA",size: 8,});
-          data.push({x: 2,y: 2,c: "#008CBA",size: 13,});
-          data.push({x: 3,y: 2,c: "#008CBA",size: 18,});
-        } else {
-          data.push({x: 1,y: 1,c: "#f44336",size: 32,});
-          data.push({x: 2,y: 1,c: "#f44336",size: 44,});
-          data.push({x: 3,y: 1,c: "#f44336",size: 51,});
-          data.push({x: 1,y: 2,c: "#cc2c6f",size: 3,});
-          data.push({x: 2,y: 2,c: "#cc2c6f",size: 5,});
-          data.push({x: 3,y: 2,c: "#cc2c6f",size: 2,});
-        }
-        return data;
-      }
-
-      var globalClintonHighlighted = true
-      drawChart(!globalClintonHighlighted);
-      // function stickColor(id) {
-      //   if(id === "clinton") {
-      //       if (!clintonHighlighted) clintonHighlighted = true;
-      //       document.getElementById("clinton").style.backgroundColor = "#008CBA";
-      //       document.getElementById("clinton").style.color = "white";
-      //       document.getElementById("trump").style.backgroundColor = "#ffffff00";
-      //       document.getElementById("trump").style.color = "black";
-      //     } else {
-      //     if (clintonHighlighted) clintonHighlighted = false;
-      //       document.getElementById("trump").style.backgroundColor = "#f44336";
-      //       document.getElementById("trump").style.color = "white";
-      //       document.getElementById("clinton").style.backgroundColor = "#ffffff00";
-      //       document.getElementById("clinton").style.color = "black";
-      //     }
-      // }
-
-
-      function drawChart(clintonHighlighted) {
-        if (clintonHighlighted === globalClintonHighlighted) return;
-        globalClintonHighlighted = clintonHighlighted;
-        var dataset = [
-            {
-             "label": "Pro-Trump Fake News",
-             "img": "trump.png"
-            },
-            {
-             "label": "Pro-Hillary Fake News",
-             "img": "hillary.png"
-            }];
-        d3.select("svg").remove();
-
-        var height = window.innerHeight*0.5;
-        var width = d3.select('#wtf').node().offsetWidth*0.5;
+drawChart();
+var waypoint = new Waypoint({
+  element: document.getElementById('chart2'),
+  handler: function(direction) {
+    if (direction === 'up') return;
+    drawChart();
+  },
+  offset: window.innerHeight*0.8
+});
+function drawChart() {
+  d3.select("svg").remove();
+        var height = window.innerHeight*0.55;
+        var width = d3.select('#wtf').node().offsetWidth*0.6;
         var margin = 40;
 
-        var data = pushData(clintonHighlighted);
+        var svg = d3.select(".chart2")
+      .append('svg')
+      .attr('class', 'chart')
+      .attr("width", width + margin*4)
+      .attr("height", height+margin*3)
+      .append("g")
+      .attr("transform", "translate(" + margin*3 + "," + margin + ")");
 
-        var labelX = 'Knowledge of the reader';
-        var labelY = 'Fake News Content';
-        var svg = d3.select('.chart')
-                    .append('svg')
-                    .attr('class', 'chart')
-                    .attr("width", width + margin*4)
-                    .attr("height", height+margin*3)
-
-                    .append("g")
-                    .attr("transform", "translate(" + margin*3 + "," + margin + ")");
-        var scaleRange = [16,50];
-        if(!clintonHighlighted) {
-          scaleRange = [4,102]
-        }         
-        var x = d3.scale.linear()
-                        .rangeRound(1)
-                        .domain([0.5, 3.5])
-                        .range([0, width]);
-
-        var y = d3.scale.linear()
-                        .domain([0.5, 2.5])
-                        .range([height, 0]);
-
-        var scale = d3.scale.linear()
-                            .domain([d3.min(data, function (d) { return d.size; }), d3.max(data, function (d) { return d.size; })])
-                            .range(scaleRange);
-
-        var opacity = d3.scale.linear()
-                              .domain([d3.min(data, function (d) { return d.size; }), d3.max(data, function (d) { return d.size; })])
-                              .range([1, .3]);
-                                        
-        var color = d3.scale.category10();
-
-        var xAxis = d3.svg.axis()
-                          .scale(x)
-                          .tickFormat(function(d){
-                              if(d === 1) return "Low Knowledge";
-                              if(d === 2) return "Medium Knowledge";
-                              if(d === 3) return "High Knowledge";
-                              return ""
-                          });
-        var yAxis = d3.svg.axis()
-                           .scale(y)
-                           .orient("left")
-                           .tickFormat(function(d){
-                              
-                              return ""
-                          });
+    var data = [53,54,54,51,52,53,53,43,49,47.5,46,42,44,42,43,40,43,40,40,33]
+    var dataD = [64,59,61,52,65,59,66,59,70,68,66,60,58,59,56,57.5,60,54,55,51]
+    var dataR = [41,52,46,47,39,49,44,31,31,32,33,27,36,32,38,26,33,27,32,14]
+    var x = d3.scale.linear().domain([0, 19]).range([0, width]);
+    var y = d3.scale.linear().domain([0, 100]).range([height, 0]);
+    var line = d3.svg.line()
+      .interpolate("cardinal")
+      .x(function(d,i) {return x(i);})
+      .y(function(d) {return y(d);})
         
-        svg.append("g")
-            .attr("class", "y axis")
-            .call(yAxis)
-            .append("text")
-               // .attr("transform", "rotate(-90)")
-               // .attr("x", 20)
-            .attr("y", -10)
-            .attr("x", 10)
-            .style("font-size", "26px")
-            .style("text-anchor", "middle")
-            .text(labelY);
-                                // x axis and label
-        svg.append("g")
-            .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")")
-            .call(xAxis)
-            .append("text")
-            .attr("x", width + 20)
-            .attr("y", margin + 10)
-            .style("text-anchor", "end")
-            .style("font-size", "26px")
-            .text(labelX);
-       
-        svg.selectAll("circle")
-            .data(data)
-            .enter()
-            .insert("circle")
-            .attr("cx", function (d) { return x(d.x); })
-            .attr("cy", function (d) { return y(d.y); })
-            .attr("opacity", function (d) { return opacity(d.size); })
-            .attr("r", 0)
-            .style("fill", function (d) { return d.c; })
-            .on("mouseover", function(d) {
-              tooltip.text(d.size+"% consumed this fake news");
-              tooltip.style("visibility", "visible");
-            })
-            .on("mousemove", function() {
-                return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");
-            })
-            .on("mouseout", function(){return tooltip.style("visibility", "hidden");})
-            .transition()
-            .delay(function (d, i) { return x(d.x) - y(d.y); })
-            .duration(500)
-            .attr("r", function (d) { return scale(d.size); })
-            .ease("linear");
-        var tooltip = d3.select("body")
-                        .append("div")
-                        .style("position", "absolute")
-                        .style("z-index", "10")
-                        .style("visibility", "hidden")
-                        .style("color", "white")
-                        .style("padding", "8px")
-                        .style("background-color", "rgba(0, 0, 0, 0.75)")
-                        .style("border-radius", "6px")
-                        .style("font", "12px sans-serif")
-                        .text("tooltip");
+    var xAxis = d3.svg.axis()
+                      .scale(x)
+                      .tickFormat(function(d){
+                              return (parseInt(d) + 1997)
+                          });
+    var yAxis = d3.svg.axis()
+                       .scale(y)
+                       .orient("left");
+    
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .append("text")
+        .attr("y", -20)
+        .attr("x", 10)
+        .style("font-size", "26px")
+        .style("text-anchor", "middle")
+        .text("Trust in media");
         
+                            // x axis and label
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+        .append("text")
+        .attr("x", width + 20)
+        .attr("y", margin + 10)
+        .style("text-anchor", "end")
+        .style("font-size", "26px")
+        .text("Year");
 
-        svg.select(".axis").selectAll(".tick").each( function(d) {
-        var p = d3.select(this);
-        console.log(d)
-        if (d === 1) {
-          p.append("image")
-          .attr({"xlink:href": "./trump.png",
-                 "width": 100,
-                 "height": 100,
-                 "transform":"translate(-110, -50)"
-                })
-          .on("mouseover", function(d) {
-              tooltip.text("Pro-Trump Fake News");
-              tooltip.style("visibility", "visible");
-            })
-            .on("mousemove", function() {
-                return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");
-            })
-            .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
-          return;
-        }
-        if (d === 2) {
-          p.append("image")
-          .attr({"xlink:href": "./hillary.png",
-                 "width": 100,
-                 "height": 100,
-                 "transform":"translate(-110, -50)"
-                })
-          .on("mouseover", function(d) {
-              tooltip.text("Pro-Hillary Fake News");
-              tooltip.style("visibility", "visible");
-            })
-            .on("mousemove", function() {
-                return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");
-            })
-            .on("mouseout", function(){return tooltip.style("visibility", "hidden");});;
-          return;
-        }
-        p.remove();
-      });
-      }
+    var path = svg.append("path")
+      .attr("d", line(data))
+      .attr("stroke", "#35c6a9aa")
+      .attr("stroke-width", "3")
+      .attr("fill", "none");
+
+    var pathD = svg.append("path")
+      .attr("d", line(dataD))
+      .attr("stroke", "#5584D8aa")
+      .attr("stroke-width", "4")
+      .attr("fill", "none");
+
+    var pathR = svg.append("path")
+      .attr("d", line(dataR))
+      .attr("stroke", "#f44336aa")
+      .attr("stroke-width", "4")
+      .attr("fill", "none");
+
+
+
+    var totalLength = path.node().getTotalLength();
+
+    path
+      .attr("stroke-dasharray", totalLength + " " + totalLength)
+      .attr("stroke-dashoffset", totalLength)
+      .transition()
+        .duration(1500)
+        .ease("linear")
+        .attr("stroke-dashoffset", 0);
+
+    var totalLengthD = pathD.node().getTotalLength();
+
+    pathD
+      .attr("stroke-dasharray", totalLengthD + " " + totalLengthD)
+      .attr("stroke-dashoffset", totalLengthD)
+      .transition()
+        .duration(1500)
+        .ease("linear")
+        .attr("stroke-dashoffset", 0);
+
+    var totalLengthR = pathR.node().getTotalLength();
+
+    pathR
+      .attr("stroke-dasharray", totalLengthR + " " + totalLengthR)
+      .attr("stroke-dashoffset", totalLengthR)
+      .transition()
+        .duration(1500)
+        .ease("linear")
+        .attr("stroke-dashoffset", 0);
+
+    var dotsData = [];
+    data.forEach(function (val, i) {
+      if (i === 9) return;
+      var newPoint = {};
+      newPoint.value = val;
+      newPoint.year = i;
+      newPoint.color = '#35c6a9';
+      dotsData.push(newPoint);
+    });
+
+    dataD.forEach(function (val, i) {
+      if (i === 9) return;
+      var newPoint = {};
+      newPoint.value = val;
+      newPoint.year = i;
+      newPoint.color = '#5584D8';
+      dotsData.push(newPoint);
+    });
+
+    dataR.forEach(function (val, i) {
+      if (i === 9) return;
+      var newPoint = {};
+      newPoint.value = val;
+      newPoint.year = i;
+      newPoint.color = '#f44336';
+      dotsData.push(newPoint);
+    });
+
+    console.log(dotsData)
+
+    
+    // setup x 
+    var xValue = function(d) { return d.year;}, // data -> value
+        xMap = function(d) { return x(xValue(d));}; // data -> display
+
+    // setup y
+    var yValue = function(d) { return d.value;}, // data -> value
+        yMap = function(d) { return y(yValue(d));}; // data -> display
+// draw dots
+    svg.selectAll(".dot")
+        .data(dotsData)
+      .enter().append("circle")
+        .attr("class", "dot")
+        .attr("r", 5.5)
+        .attr("cx", xMap)
+        .attr("cy", yMap)
+        .style("fill", function(d) { return d.color;});
+}
