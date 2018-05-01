@@ -7,6 +7,14 @@ var waypoint = new Waypoint({
   },
   offset: window.innerHeight*0.8
 });
+var waypoint = new Waypoint({
+  element: document.getElementById('final_loop'),
+  handler: function(direction) {
+    if (direction === 'up') return;
+    document.getElementById("final_loop").innerHTML='<object style="width: 100%; height: 100%; background: #00000000" type="text/html" data="./last_loop/Loop.html" ></object>';
+  },
+  offset: window.innerHeight*0.8
+});
 function drawChart() {
   d3.select("svg").remove();
         var height = window.innerHeight*0.55;

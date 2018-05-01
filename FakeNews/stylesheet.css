@@ -352,3 +352,13 @@
       #trump_fake {
         width: 40%;
       }
+
+      #final_loop {
+        width: 100%;
+      }
+
+      #final_container {
+        width: 100%;
+        /*padding-top: 24px;*/
+        padding-bottom: 150px;
+      }
