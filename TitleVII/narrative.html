@@ -54,7 +54,9 @@ body {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -213,7 +215,7 @@ Nicole: “Hey, I just wanted to check in with you about how things are going at
     (live: 3ms)[
         (append: ?typewriterOutput4)[(print: $typewriterText4&#39;s $typewriterPos4)](set: $typewriterPos4 to it + 1)(if: $typewriterPos4 is $typewriterText4&#39;s length + 1)[(stop:)[(live:1.5s)[(stop:)(transition: &quot;dissolve&quot;)[
 		(link-goto: &quot;With the help of Nicole, Amanda was able to find a lawyer and file a complaint to the EEOC&quot;,&quot;Filing&quot;)]]]
-]]]]]]]]]]]]]]]</tw-passagedata><tw-passagedata pid="5" name="Filing" tags="" position="591,233" size="100,100">&lt;h2&gt; Filing &lt;/h2&gt;
+]]]]]]]]]]]]]]]</tw-passagedata><tw-passagedata pid="5" name="Filing" tags="" position="589,232" size="100,100">&lt;h2&gt; Filing &lt;/h2&gt;
 &lt;img src=&quot;./file.png&quot; style=&quot;margin-left: 25%&quot; width=&quot;50%&quot;/&gt;
 Amanda’s computer chimed as the video call connected and Nicole’s living room filled it’s screen.  “Thank you so much for finding that lawyer,” Amanda blurted out. “I have no idea where I’d be without you.”
 
@@ -242,7 +244,7 @@ You have reached one of the ends to this narrative, feel free to (link-goto: &qu
 (click: &quot;continue waiting&quot;)[(replace: &quot;withdraw my case&quot;)[withdraw my filing]
 (transition: &quot;dissolve&quot;)[- 200 days later -
 &lt;img src=&quot;./file_200dayslater.png&quot; style=&quot;margin-left: 0%&quot; width=&quot;100%&quot;/&gt;]
-(set: $typewriterText1 to &quot;My lawyer just heard back from the EEOC! We just got our \&quot;Notice of Right to Sue\&quot;!&quot;)(set: $typewriterText2 to &quot;Yeah, finally! I’m so glad. But now I have only 90 days to actually sue.&quot;)(set: $typewriterText3 to &quot;Yeah, we’ve been looking forward to that for the last few months, and I’ve already spent half of my savings for the trip on a lawyer.&quot;)(set: $typewriterText4 to &quot;I don’t know yet honestly. This has already been so much, I’m not even sure if the lawsuit is worth it. I guess I’ll think a bit more over the weekend.&quot;)
+(set: $typewriterText1 to &quot;My lawyer just heard back from the EEOC! We just got our \&quot;Notice of Right to Sue\&quot;!&quot;)(set: $typewriterText2 to &quot;Yeah, finally! I’m so glad. But now I have only 90 days to actually sue.&quot;)(set: $typewriterText3 to &quot;Yeah, we’ve been looking forward to that for the last few months, and I’ve already spent half of my savings for the trip on a lawyer.&quot;)(set: $typewriterText4 to &quot;I don’t know yet honestly. This has already been so much, I’m not even sure if the lawsuit is worth it. I guess I’ll think a bit more over the weekend. &quot;)
 (live: 3s)[(stop:)(set: $typewriterPos1 to 1)|typewriterOutput1&gt;[(transition: &quot;dissolve&quot;)[Amanda: ]]
     (live: 3ms)[
         (append: ?typewriterOutput1)[(print: $typewriterText1&#39;s $typewriterPos1)](set: $typewriterPos1 to it + 1)(if: $typewriterPos1 is $typewriterText1&#39;s length + 1)[(stop:)(set: $repeats to 0)(live: 1.5s)[(transition: &quot;pulse&quot;) [(set: $repeats to it + 1)(if: $repeats is 4)[(stop:)]typing...]]
@@ -257,9 +259,8 @@ You have reached one of the ends to this narrative, feel free to (link-goto: &qu
 			(live: 6.5s)[(stop:)(replace:&quot;typing...&quot;)[Nicole: So what do you want to do?]
 			(live: 3s)[(stop:)(set: $typewriterPos4 to 1)|typewriterOutput4&gt;[(transition: &quot;dissolve&quot;)[Amanda: ]]
     (live: 3ms)[
-        (append: ?typewriterOutput4)[(print: $typewriterText4&#39;s $typewriterPos4)](set: $typewriterPos4 to it + 1)(if: $typewriterPos4 is $typewriterText4&#39;s length + 1)[(stop:)
-]]]]]]]]]]]]]]]
-]</tw-passagedata><tw-passagedata pid="6" name="note" tags="" position="412,199" size="100,100">&lt;h2&gt;Note from makers&lt;/h2&gt;
+        (append: ?typewriterOutput4)[(print: $typewriterText4&#39;s $typewriterPos4)](set: $typewriterPos4 to it + 1)(if: $typewriterPos4 is $typewriterText4&#39;s length + 1)[(stop:)(transition: &quot;dissolve&quot;)[You have reached one of the ends to this narrative, feel free to (link-goto: &quot;restart&quot;, &quot;Call1&quot;) or (link-goto: &quot;check the makers&#39; note&quot;, &quot;note&quot;)]]
+]]]]]]]]]]]]]]]</tw-passagedata><tw-passagedata pid="6" name="note" tags="" position="412,199" size="100,100">&lt;h2&gt;Note from makers&lt;/h2&gt;
 
 Through this narrative, we wanted to communicate how complex and arduous the process of filing for sexual harassment could be in real life. We hope that you learned not only important conditions and logistical details about the process, but also the following complications an individual would go through during the process. We are not here to encourage or discourage a certain set of choices we provided. No single branch of decision tree is supposed to be better than the others, but an individual’s choice. Our intention is to make a statement on the current procedure for filing; that it entails a lot of ambiguity, demanding requirements for timeline, waitings, and eventually resources and energy from the individual that one may not expect. The presented story is not based on a specific individual’s experience, but a collage of different individuals and our secondary research.
 
