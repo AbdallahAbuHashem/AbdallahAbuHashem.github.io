@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="2nd perspective" startnode="1" creator="Twine" creator-version="2.2.1" ifid="0BA900AB-8EB4-4A1F-A0F3-F67DE107F5BF" zoom="0.6" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Introduction" tags="" position="640,52" size="100,100">(set:$relationship to -1)
+<tw-storydata name="2nd perspective" startnode="1" creator="Twine" creator-version="2.2.1" ifid="0BA900AB-8EB4-4A1F-A0F3-F67DE107F5BF" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Introduction" tags="" position="640,52" size="100,100">(set:$relationship to -1)
 You are a 24 year-old. You graduated from college about 3 years ago, and you currently work in a big company. Last week, you received a promotion because of your hard work. You are throwing a party tonight celebrating your promotion.
 
 You have invited many people including your significant other, Emma. You have been with Emma for 10 months. You believe you are in love with Emma, and you think she is in love with you too. You hope your relationship continues.
@@ -63,7 +63,7 @@ Emma: Yes, but I won&#39;t be the best company haha.
 You: That&#39;s alright. I&#39;ll come to your place later.
 You: uhh, are you sure you&#39;re ok? Have I done anything to upset you?
 (click: &quot;You: That&#39;s alright. I&#39;ll come to your place later.&quot;)[(set: $act3 to 0)(set: $care to $care+1)(go-to: &quot;atapartment&quot;)]
-(click: &quot;You: uhh, are you sure you&#39;re ok? Have I done anything to upset you?&quot;)[(set: $act3 to 1)(set: $care to $care+1)(set: $blame to $blame+1)(set: $worry to $worry+1)(go-to: &quot;phonecall&quot;)]</tw-passagedata><tw-passagedata pid="5" name="stress" tags="" position="291,357" size="100,100">(set: $clarify to 1)
+(click: &quot;You: uhh, are you sure you&#39;re ok? Have I done anything to upset you?&quot;)[(set: $act3 to 1)(set: $care to $care+1)(set: $blame to $blame+1)(set: $worry to $worry+1)(go-to: &quot;phonecall&quot;)]</tw-passagedata><tw-passagedata pid="5" name="stress" tags="" position="292,357" size="100,100">(set: $clarify to 1)
 Just as the party is starting, you get the following message from Emma:
 
 &quot;Hey honey. I don&#39;t think I can make it to tonight&#39;s party. I&#39;m sorry. Have fun tho!&quot;
@@ -138,9 +138,9 @@ After this brief exchange of texts, you get sucked back into the party, and you 
 
 (click: &quot;After this brief exchange of texts, you get sucked back into the party, and you have a good time until the end of the night.&quot;)[(go-to: &quot;phonecall&quot;)]</tw-passagedata><tw-passagedata pid="10" name="nextdaycall" tags="" position="481,1073" size="100,100">It&#39;s around 5pm of the day after your party. Since last night, you have not talked to Emma. You have not had the time to call her, and she probably was busy as well.
 
-You&#39;re a bit worried about how things ended up going at work for her especially after you visited her last night, where she told you that she was not done with work. (if: $apartment is 2)[And even though she said she will stay up to finish the work, you wasn&#39;t able to check with her this morning to see how things went.] You know how much this job and work mean for Emma. When she got the job few months ago, she was really excited to start it. She is used to pour her heart and soul into what she does. (if: $apartment is 0)[The fact that she accepted going to sleep without finishing the work is concerning to you. She usually would do all what she can (even if unhealthy) to finish the work, but last night you felt it was different. ](if: $work_delay is 1)[In addition, your fight with her last night definitely did not end well. You feel that your relationship with her is at risk. You do not know what to do to fix things, but you know that you don&#39;t want to have your relationship to be that way. As a result, you decide to call her soon after work. You&#39;re a bit anxious about the call since you feel that just as you have your doubts about the relationship, she might too. You will try to convince her to have dinner together to talk things out]
+You&#39;re a bit worried about how things ended up going at work for her especially after you visited her last night, where she told you that she was not done with work. (if: $apartment is 2)[And even though she said she will stay up to finish the work, you wasn&#39;t able to check with her this morning to see how things went.] You know how much this job and work mean for Emma. When she got the job few months ago, she was really excited to start it. She is used to pour her heart and soul into what she does. (if: $apartment is 0)[The fact that she accepted going to sleep without finishing the work is concerning to you. She usually would do all what she can (even if unhealthy) to finish the work, but last night you felt it was different. ](if: $apartment is 1)[In addition, your fight with her last night definitely did not end well. You feel that your relationship with her is at risk. You do not know what to do to fix things, but you know that you don&#39;t want to have your relationship to be that way. As a result, you decide to call her soon after work. You&#39;re a bit anxious about the call since you feel that just as you have your doubts about the relationship, she might too. You will try to convince her to have dinner together to talk things out]
 
-(link-goto: &quot;You decide to call her right after work, and see how you want to talk things out.&quot;, &quot;realcall&quot;)</tw-passagedata><tw-passagedata pid="11" name="atapartment" tags="" position="299,601" size="100,100">(set: $atapartment to 1)Emma lives in a cute little one-bedroom apartment by herself. The apartment is usually organized and well-kept, but when she&#39;s busy or not feeling well, it starts being a bit messy.
+(link-goto: &quot;You decide to call her right after work, and see how you want to talk things out.&quot;, &quot;realcall&quot;)</tw-passagedata><tw-passagedata pid="11" name="atapartment" tags="" position="298,600" size="100,100">(set: $atapartment to 1)Emma lives in a cute little one-bedroom apartment by herself. The apartment is usually organized and well-kept, but when she&#39;s busy or not feeling well, it starts being a bit messy.
 
 After the party, you walk to Emma&#39;s apartment. Once you ring the bell, a sound from within the apartment shouts &quot;Come in!&quot;, and so you do. You put your stuff down and head to the bedroom.
 
@@ -164,7 +164,7 @@ You: Uhh, this might hurt your future within the company, which is the last thin
 
 Not knowing what to do, you...
 (link-goto: &quot;start scrolling back in your conversation&quot;, &quot;bettertimes&quot;)
-(link-goto: &quot;call her. It&#39;s only midnight.&quot;, &quot;nightcall&quot;)</tw-passagedata><tw-passagedata pid="13" name="Stressfollowup" tags="" position="295,467" size="100,100">Just as the party is starting, you get the following message from Emma:
+(link-goto: &quot;call her. It&#39;s only midnight.&quot;, &quot;nightcall&quot;)</tw-passagedata><tw-passagedata pid="13" name="Stressfollowup" tags="" position="295,466" size="100,100">Just as the party is starting, you get the following message from Emma:
 
 &quot;Hey honey. I don&#39;t think I can make it to tonight&#39;s party. I&#39;m sorry. Have fun tho!&quot;
 
@@ -225,7 +225,7 @@ Emma: You know, nothing much. I&#39;m just trying to finish this presentation be
 You: Good, but couldn&#39;t you have done your work another time?
 
 You hear Emma on the other end of the line starting to cry.
-
+(set: $cry to 1)
 You: I&#39;m sorry I didn&#39;t mean to make you feel bad about it. I just really wanted to see you.
 You: ... I&#39;m gonna go to sleep. Good night]
 
@@ -288,7 +288,7 @@ Emma: Yeah, you know? I&#39;m just gonna stay up working on it. You should just 
 
 Feeling pretty tired from the party, you listen to Emma and head to sleep.]
 
-(click: &quot;You: Hopefully. Let&#39;s just go to sleep&quot;)[(set: $work_delay to 0)(go-to: &quot;nextdaycall&quot;)]
+(click: &quot;You: Hopefully. Let&#39;s just go to sleep&quot;)[(go-to: &quot;nextdaycall&quot;)]
 (click: &quot;You: Ok, forget about it. Let&#39;s just go to sleep.&quot;)[(set: $work_delay to 0)(set: $care to $care-1)(set: $relationship to $relationship-1)(go-to: &quot;fight&quot;)]
 (click: &quot;You: Ugh, I just can&#39;t understand you to be honest. I just had a party to celebrate my promotion, and you decide that you don&#39;t wanna see people. And this is not a one off thing. It feels like a pattern with everything I&#39;ve been trying to do with you lately.&quot;)[(set: $work_delay to 1)(set: $relationship to $relationship-2)(set: $blame to $blame+2)(set: $confront to $confront+2)(go-to: &quot;bigfight&quot;)]
 (click: &quot;You: Does that include me?&quot;)[(set: $work_delay to 2)(set: $relationship to $relationship-1)(set: $confront to $confront+1)(set: $doubt to $doubt+1)(go-to: &quot;fight&quot;)]
@@ -321,11 +321,11 @@ You: I really didn&#39;t mean to increase your burden. I don&#39;t know what to 
 Emma: Your right. I haven&#39;t been myself lately. I think I need some personal space. I would appreciate you spending the night at your place. We&#39;ll talk tomorrow.
 
 You respect Emma&#39;s personal space, so you leave to your apartment filled with worry and questions about your relationship.
-
+(set: $big_fight to 1)
 (link-goto: &quot;Onto the next day&quot;, &quot;nextdaycall&quot;)</tw-passagedata><tw-passagedata pid="21" name="calltocallbridge" tags="" position="620,1078" size="100,100">It&#39;s nearly 8am next morning. You get out of your bed and get ready for work. You need to get there by 9am. You certainly have not forgotten about last night, and you want to follow up with Emma about how things have been going with her.
 
-(if: $ignore2 is 1)[You feel like you barely have talked last night. You llok through your phone, and you realize you have only exchanged few texts and you ended up ignoring Emma&#39;s last text. You don&#39;t know what she needed to finish last night, and if she was able to finish it. Her last message said &quot;I just have some work to do, and I don&#39;t feel like being around people for the night&quot;. You feel unsettled since you have seen her behavior of not wanting to spend time with other people growing over the last few weeks. You decide to call her today to check on her and ask for a bit of clarification.](if: $ignore3 is 1)[Things between you two are very concerning following last night. You recall that she cried over the phone last night because of your harsh way of talking about her choosing to do work over your party. What made things worse is your abrupt end to the conversation without trying to fix the damage between you two. From your point of view, you want things to be better, but you also know that your relationship have been dysfunctional for the last few weeks, and you know that a relationship cannot continue like this. You want Emma to face the reality and start taking action with you to get the relationship to where it was, or you can choose to end things between you two](if: $bettertimes is 1)[Regarding your relationship with Emma, you have conflicting feelings. From one side, you know the last few weeks have been extremely dysfunctional and you don&#39;t want your relationship to continue in that shape. However, you believe that happier times, just like the day you spent together at the apple orchard, are possible. You blame yourself for some of the recent dysfunction, so you want to fix things. You decide that later in the day you will call Emma and tell her about your plan to spend a full day together.](if: $annoyed is 1)[Things between you two are concerning following last night. You recall that she cried over the phone last night because of your harsh way of talking about her choosing to do work over your party. You soon after realized your wrong-doing, and tried to fix what you have done. Although it seemed that what you said towards the end made things a bit better, the damage is still there. From your point of view, you want things to be better, but you also know that your relationship have been dysfunctional for the last few weeks, and you know that a relationship cannot continue like this. You want Emma to clarify things up so that you can help. You are still frustrated from all of the recent changes in the relationship, but you also want things to work out.](if: $clarify is 1)[Regarding your relationship with Emma, it seems like things are not getting much better. From your conversation last time, it seems that Emma knows about the change in her behavior over the last few weeks. You don&#39;t want to put pressure on her to fix things, or anything of that sort, but you also want to better understand what is going on. You feel like you want to help, but you can&#39;t help without knowing what to do or how to be of use to her. You plan on calling her later today to ask if she can talk more about the things that have been happening over the last few weeks.](if: $ignoreother is 1)[You look back through your texts with Emma from last night. You notice that Emma talked about &quot;Other things&quot; worrying her, but you completely ignored that and you just asked her twice the same question about being stressful with work. Looking back at your texts with her, you realize that this probably was not the best way to handle the situation. You are now a little bit worried about the //other things// she mentioned, and whether that affects your relationship with her. You plan on calling her later today to check on her stress with work and bring up the hint that you missed last night.]
-(set:$lunchattempt to 1)(link-goto: &quot;You attempt calling Emma during lunch time.&quot;, &quot;realcall&quot;)</tw-passagedata><tw-passagedata pid="22" name="realcall" tags="" position="533,1206" size="100,100">(if: $lunchattempt is 1)[You try to call Emma at lunch time. Your call goes through to the voicemail. She&#39;s probably too busy, she could easily miss a lunch time call. (if: $care &gt; 0 or $relationship &gt; -2)[You soon after receive a message saying &quot;I had to go to the dentist during lunch time. We&#39;ll talk later tonight.&quot;]
+(if: $ignore2 is 1)[You feel like you barely have talked last night. You llok through your phone, and you realize you have only exchanged few texts and you ended up ignoring Emma&#39;s last text. You don&#39;t know what she needed to finish last night, and if she was able to finish it. Her last message said &quot;I just have some work to do, and I don&#39;t feel like being around people for the night&quot;. You feel unsettled since you have seen her behavior of not wanting to spend time with other people growing over the last few weeks. You decide to call her today to check on her and ask for a bit of clarification.](if: $ignore3 is 1)[Things between you two are very concerning following last night. You recall that she cried over the phone last night because of your harsh way of talking about her choosing to do work over your party. What made things worse is your abrupt end to the conversation without trying to fix the damage between you two. From your point of view, you want things to be better, but you also know that your relationship have been dysfunctional for the last few weeks, and you know that a relationship cannot continue like this. You want Emma to face the reality and start taking action with you to get the relationship to where it was, or you can choose to end things between you two](if: $bettertimes is 1)[Regarding your relationship with Emma, you have conflicting feelings. From one side, you know the last few weeks have been extremely dysfunctional and you don&#39;t want your relationship to continue in that shape. However, you believe that happier times, just like the day you spent together at the apple orchard, are possible. You blame yourself for some of the recent dysfunction, so you want to fix things. You decide that later in the day you will call Emma and tell her about your plan to spend a full day together.](if: $annoyed is 1)[Things between you two are concerning following last night. You recall that she cried over the phone last night because of your harsh way of talking about her choosing to do work over your party. You soon after realized your wrong-doing, and tried to fix what you have done. Although it seemed that what you said towards the end made things a bit better, the damage is still there. From your point of view, you want things to be better, but you also know that your relationship have been dysfunctional for the last few weeks, and you know that a relationship cannot continue like this. You want Emma to clarify things up so that you can help. You are still frustrated from all of the recent changes in the relationship, but you also want things to work out.](if: $clarify is 1 and $ignoreother is not 1)[Regarding your relationship with Emma, it seems like things are not getting much better. From your conversation last time, it seems that Emma knows about the change in her behavior over the last few weeks. You don&#39;t want to put pressure on her to fix things, or anything of that sort, but you also want to better understand what is going on. You feel like you want to help, but you can&#39;t help without knowing what to do or how to be of use to her. You plan on calling her later today to ask if she can talk more about the things that have been happening over the last few weeks.](if: $ignoreother is 1)[You look back through your texts with Emma from last night. You notice that Emma talked about &quot;Other things&quot; worrying her, but you completely ignored that and you just asked her twice the same question about being stressful with work. Looking back at your texts with her, you realize that this probably was not the best way to handle the situation. You are now a little bit worried about the //other things// she mentioned, and whether that affects your relationship with her. You plan on calling her later today to check on her stress with work and bring up the hint that you missed last night.]
+(set:$lunchattempt to 1)(link-goto: &quot;You attempt calling Emma during lunch time.&quot;, &quot;realcall&quot;)</tw-passagedata><tw-passagedata pid="22" name="realcall" tags="" position="534,1206" size="100,100">(if: $lunchattempt is 1)[You try to call Emma at lunch time. Your call goes through to the voicemail. She&#39;s probably too busy, she could easily miss a lunch time call. (if: $care &gt; 0 or $relationship &gt; -2)[You soon after receive a message saying &quot;I had to go to the dentist during lunch time. We&#39;ll talk later tonight.&quot;]
 
 It&#39;s around 5pm of the day after your party.]
 
@@ -359,19 +359,132 @@ You: No problem. Do you wanna eat watching TV or in the dining room?
 Emma: Let&#39;s do dining room. I like to sit at the table.
 You: That works. Can you prepare things? The food is nearly ready.
 
-Emma prepares the table as you finish cooking. Soon after, both of you sit down and start eating.
-
-You: So what do you think?
+Emma prepares the table as you finish cooking. Soon after, both of you sit down and (if: $cry is 1 or $fight is 1 or $big_fight is 1 or $relationship is -3)[(if: $lunchattempt)[(link-goto: &quot;start eating&quot;, &quot;eating&quot;).](else:)[(link-goto: &quot;start eating&quot;, &quot;eating-minimal&quot;).]](else:)[(link-goto: &quot;start eating&quot;, &quot;eating&quot;).]</tw-passagedata><tw-passagedata pid="24" name="eating" tags="" position="968,1445.5" size="100,100">You: So what do you think?
 Emma: Well, you know that I really like it. Thank you. You didn&#39;t have to burden yourself with making it.
-You: Oh, don&#39;t think about it. I wanna do what I can to make you feel better.
-Emma: ... can I ask you a question?
-You: Yeah for sure.
-(if: $work_delay is 1)[Emma: Do you still love me?]
-(else:)[Emma: I feel like I might have been a bit annoying or not exactly what you want from a partner over the last few weeks, and honestly sometimes I wonder why you would still be with me, so like do you love me?]
+(if: $lunchattempt is not 1)[You: Oh, don&#39;t think about it. I wanna do what I can to make you feel better. How was your day?
+Emma: The usual, plus the presentation I managed to avoid. Oh, I also went to the dentist.
+(if: $care is &gt; 0)[You: Oh is everything ok?]
+(else:)[You: Why is that?]]
+(if: $lunchattempt is 1)[You: Oh, don&#39;t think about it. I wanna do what I can to make you feel better. How was the dentist visit?]
+Emma: Nothing too bad. Although the doctor said that I grind on my teeth too hard while sleeping haha.
+You: Did they say why?
+Emma: Yeah, they said stress or anxiety.
 
-You: Of course I love you! It&#39;s true the last few weeks have not been that good, but I&#39;m sure things will soon improve.
-You: Of course I love you! But I&#39;m also pretty concerned about how you&#39;ve been doing recently.
-You: </tw-passagedata></tw-storydata>
+(if: $ignore2 is 1)[You: Does that have to do with our relationship? I&#39;m sorry for ignoring your text yesterday.
+Emma: Don&#39;t worry about it.
+You: I wanna ask you a question. Don&#39;t take it the wrong way tho.
+Emma: Yeah, what&#39;s up?
+You: What&#39;s been happening the last few weeks?](else: $ignore3 is 1)[You: Does that have to do with our relationship? I messed up last night. I don&#39;t know how I just left you there crying.
+Emma: ...
+
+You: How can I make it up for you?
+You: The truth is, I think a clear line of communication is crucial to this relationship.](else: $bettertimes is 1)[You: Does that have to do with our relationship? I was going through our messages last night, and I had this crazy idea. Why don&#39;t we do the apple orchard day again?
+Emma: Why would you wanna do that? I barely get my work done without days off.
+
+You feel a bit bad that you suggested it
+
+You: I thought we might enjoy a day for only us two you know, especially with everything between us lately.
+You: Never really mind. It was not the best of ideas you&#39;re right.
+](else: $annoyed is 1)[You: Does that have to do with our relationship? I&#39;m sorry about last night again.
+Emma: Honestly, I don&#39;t know why we have to go through such things.
+
+You: How can I make it up for you?
+You: The truth is, I think a clear line of communication is crucial to this relationship.](else: $clarify is 1 and $ignoreother is not 1)[You: Does that have to do with our relationship? I&#39;m sorry about last night again.
+Emma: Honestly, I don&#39;t know why we have to go through such things.
+
+You: How can I make it up for you?
+You: The truth is, I think a clear line of communication is crucial to this relationship.](else: $ignoreother is 1)[]</tw-passagedata><tw-passagedata pid="25" name="eating-minimal" tags="" position="336,1438.5" size="100,100">You: So what do you think?
+Emma: Well, you know that I really like it. Thank you. You didn&#39;t have to burden yourself with making it.
+(if: $lunchattempt is not 1)[You: Oh, don&#39;t think about it. I wanna do what I can to make you feel better. How was your day?
+Emma: The usual, plus the presentation I managed to avoid.]
+
+You: Glad it wasn&#39;t too bad!
+You: *share your own day*
+You: Hey, umm, I wanna apologize for yesterday.
+
+(click: &quot;You: Glad it wasn&#39;t too bad!&quot;)[(goto: &quot;eating-minimal-ignore&quot;)]
+(click: &quot;You: *share your own day*&quot;)[(goto: &quot;eating-minimal-ego&quot;)]
+(click: &quot;You: Hey, umm, I wanna apologize for yesterday.&quot;)[(set: $apology to 0)(goto: &quot;eating-minimal-apology&quot;)]</tw-passagedata><tw-passagedata pid="26" name="eating-minimal-ignore" tags="" position="95,1557.5" size="100,100">You: So what do you think?
+Emma: Well, you know that I really like it. Thank you. You didn&#39;t have to burden yourself with making it.
+You: Oh, don&#39;t think about it. I wanna do what I can to make you feel better. How was your day?
+Emma: The usual, plus the presentation I managed to avoid.
+You: Glad it wasn&#39;t too bad!
+
+A moment of silence follows...
+
+Emma: Can I ask you a question?
+You: Yeah sure.
+Emma: Do you really love me?
+
+(link-goto: &quot;You: Yeah! Yesterday was just a day off.&quot;, &quot;eating-minimal-apology-off&quot;)
+(link-goto: &quot;You: Yeah! I wouldn&#39;t be apologizing if I didn&#39;t!&quot;, &quot;eating-minimal-apology-ofc&quot;)
+(link-goto: &quot;You: Yeah! But do you?&quot;, &quot;eating-minimal-apology-doubt&quot;)</tw-passagedata><tw-passagedata pid="27" name="eating-minimal-ego" tags="" position="211,1558.5" size="100,100">You share how your day went with Emma. She seems to be attentively listening to you, but also distracted from time to time. After you finish sharing, she doesn&#39;t make attempts at keeping the conversation going.
+
+As a result, you
+(link-goto: &quot;address last night&quot;, &quot;eating-minimal-apology&quot;)
+(link-goto: &quot;remain silent (not an option currently)&quot;)</tw-passagedata><tw-passagedata pid="28" name="eating-minimal-apology" tags="" position="324,1562.5" size="100,100">(if: $apology is 0)[You: So what do you think?
+Emma: Well, you know that I really like it. Thank you. You didn&#39;t have to burden yourself with making it.
+(if: $lunchattempt is not 1)[You: Oh, don&#39;t think about it. I wanna do what I can to make you feel better. How was your day?
+Emma: The usual, plus the presentation I managed to avoid.]]
+
+You: Hey, umm, I wanna apologize for yesterday.
+Emma: You... You don&#39;t have to. I&#39;ve been too much trouble lately.
+You: No, not at all. I love you. I want this to continue, ok? This is just a rough patch, and we&#39;ll get through it.
+Emma: I don&#39;t know if it&#39;s a rough patch that we&#39;ll get through to be honest. Can I ask you a question?
+You: Yeah sure.
+Emma: Do you really love me?
+
+(link-goto: &quot;You: Yeah! Yesterday was just a day off.&quot;, &quot;eating-minimal-apology-off&quot;)
+(link-goto: &quot;You: Yeah! I wouldn&#39;t be apologizing if I didn&#39;t!&quot;, &quot;eating-minimal-apology-ofc&quot;)
+(link-goto: &quot;You: Yeah! But do you?&quot;, &quot;eating-minimal-apology-doubt&quot;)</tw-passagedata><tw-passagedata pid="29" name="eating-minimal-apology-off" tags="" position="260,1676.5" size="100,100">Emma: Do you really love me?
+You: Yeah! Yesterday was just a day off.
+
+Emma looks up to you
+
+Emma: I hope so.
+
+Emma looks like she&#39;s struggling to say something
+
+You: Do you wanna say something?
+Emma: No.. Actually yes. I... I think I have clinical depression.
+
+(link-goto: &quot;The news shock you. You sit back and take a second to process the information.&quot;, &quot;depression-reply&quot;)</tw-passagedata><tw-passagedata pid="30" name="eating-minimal-apology-doubt" tags="" position="496,1682.5" size="100,100">Emma: Do you really love me?
+You: Yeah! But do you?
+Emma: What do you think?
+You: After all of what happened last night, you still decided to come here. I think that says something.
+
+(link-goto: &quot;Emma sits silent for a little bit following your answer.&quot;, &quot;redemption&quot;)</tw-passagedata><tw-passagedata pid="31" name="eating-minimal-apology-ofc" tags="" position="376,1682.5" size="100,100">Emma: Do you really love me?
+You: Yeah! I wouldn&#39;t be apologizing if I didn&#39;t!
+Emma: Well then why did we have our conversation the way we did last night? (if: $cry is 1)[Why did you make me cry in the first place?](else: $fight is 1 or $big_fight)[Why did we have to fight in the first place?]
+
+(link-goto: &quot;You: Why are you blaming me alone about this?&quot;, &quot;breakup-early&quot;)
+(link-goto: &quot;You: We didn&#39;t have to. It&#39;s all my fault and please forgive me.&quot;, &quot;redemption&quot;)</tw-passagedata><tw-passagedata pid="32" name="depression-reply" tags="" position="757,1804.5" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="33" name="breakup-early" tags="" position="324,1803.5" size="100,100">Emma: Do you really love me?
+You: Yeah! I wouldn&#39;t be apologizing if I didn&#39;t!
+Emma: Well then why did we have our conversation the way we did last night? (if: $cry is 1)[Why did you make me cry in the first place?](else: $fight is 1 or $big_fight)[Why did we have to fight in the first place?]
+You: Why are you blaming me alone about this?
+Emma: You know what? I&#39;m done with this, ok? I can&#39;t fight you and myself all the time together. I don&#39;t even know why I thought there is a point of coming here after last night... I thought you might be my support. Instead all what I get is things to make me more depressed.
+
+(link-goto: &quot;Emma gets up abruptly and leaves immediately leaving you with no chance of getting her.&quot;, &quot;breakup-early-final&quot;)</tw-passagedata><tw-passagedata pid="34" name="breakup-early-final" tags="" position="327,1910.5" size="100,100">Boy, ya fucked up. How can you do all of this to a significant other? Were you playing the game seriously or did you think that all the bad things you say have no effect?
+
+If you think your words broke Emma, guess what, you failed. Emma is fighting depression on her own with the support of her loved ones. Those who actually appreciate her, ok? She does NOT need you.
+
+If you were just trying out the worst scenario, maybe try other more realistic ones please.</tw-passagedata><tw-passagedata pid="35" name="redemption" tags="" position="429,1801.5" size="100,100">Emma breaks into tears. You don&#39;t know what to do. She takes a moment to collect her words. Meanwhile, you sit next to her, and you give her a side hug.
+
+Emma: Why is this happening to us? I love you and I&#39;m sure you&#39;re honest about loving me, but I just wanna be happy with you
+You: I want the same thing.
+Emma: I know I haven&#39;t been very clear about things recently, but I just want you to be patient with me.
+
+(link-goto: &quot;You: Do you think you can clarify?&quot;, &quot;avoid-answer&quot;)
+(link-goto: &quot;You: It&#39;s fine. I still love you.&quot;, &quot;other-day-confession&quot;)</tw-passagedata><tw-passagedata pid="36" name="avoid-answer" tags="" position="432,1895.5" size="100,100">Emma breaks into tears. You don&#39;t know what to do. She takes a moment to collect her words. Meanwhile, you sit next to her, and you give her a side hug.
+
+Emma: Why is this happening to us? I love you and I&#39;m sure you&#39;re honest about loving me, but I just wanna be happy with you
+You: I want the same thing.
+Emma: I know I haven&#39;t been very clear about things recently, but I just want you to be patient with me.
+You: Do you think you can clarify?
+Emma: I can&#39;t now. I don&#39;t feel strong enough.
+You: Ok, don&#39;t worry about it.
+
+(link-goto: &quot;End dinner.&quot;, &quot;other-day-confession&quot;)</tw-passagedata><tw-passagedata pid="37" name="other-day-confession" tags="" position="762,1948.5" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
