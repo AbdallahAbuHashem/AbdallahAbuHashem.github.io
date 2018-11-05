@@ -389,11 +389,16 @@ You: Never really mind. It was not the best of ideas you&#39;re right.
 Emma: Honestly, I don&#39;t know why we have to go through such things.
 
 You: How can I make it up for you?
-You: The truth is, I think a clear line of communication is crucial to this relationship.](else: $clarify is 1 and $ignoreother is not 1)[You: Does that have to do with our relationship? I&#39;m sorry about last night again.
-Emma: Honestly, I don&#39;t know why we have to go through such things.
+You: The truth is, I think a clear line of communication is crucial to this relationship.](else: $clarify is 1 and $ignoreother is not 1)[You: Does that have to do with our relationship? I really wanna know what&#39;s up.
+Emma: Hmm, ok. I actually...
 
-You: How can I make it up for you?
-You: The truth is, I think a clear line of communication is crucial to this relationship.](else: $ignoreother is 1)[]</tw-passagedata><tw-passagedata pid="25" name="eating-minimal" tags="" position="336,1438.5" size="100,100">You: So what do you think?
+Emma looks like she&#39;s struggling to say something
+
+Emma: I think I have clinical depression.
+
+(link-goto: &quot;The news shock you. You sit back and take a second to process the information.&quot;, &quot;depression-reply&quot;)](else: $ignoreother is 1)[You: Does this have to do with our relationship? I&#39;m really sorry. You mentioned &quot;other things&quot; stressing you yesterday and I didn&#39;t ask about that. Can you clarify?
+Emma: Umm, yeah, I don&#39;t honestly remember what I was referring to, but yeah I just having been feeling well lately, and it seems hard to avoid it... I think I have clinical depression]
+(link-goto: &quot;End for now&quot;, &quot;immature-ending&quot;)</tw-passagedata><tw-passagedata pid="25" name="eating-minimal" tags="" position="336,1438.5" size="100,100">You: So what do you think?
 Emma: Well, you know that I really like it. Thank you. You didn&#39;t have to burden yourself with making it.
 (if: $lunchattempt is not 1)[You: Oh, don&#39;t think about it. I wanna do what I can to make you feel better. How was your day?
 Emma: The usual, plus the presentation I managed to avoid.]
@@ -458,7 +463,7 @@ You: Yeah! I wouldn&#39;t be apologizing if I didn&#39;t!
 Emma: Well then why did we have our conversation the way we did last night? (if: $cry is 1)[Why did you make me cry in the first place?](else: $fight is 1 or $big_fight)[Why did we have to fight in the first place?]
 
 (link-goto: &quot;You: Why are you blaming me alone about this?&quot;, &quot;breakup-early&quot;)
-(link-goto: &quot;You: We didn&#39;t have to. It&#39;s all my fault and please forgive me.&quot;, &quot;redemption&quot;)</tw-passagedata><tw-passagedata pid="32" name="depression-reply" tags="" position="757,1804.5" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="33" name="breakup-early" tags="" position="324,1803.5" size="100,100">Emma: Do you really love me?
+(link-goto: &quot;You: We didn&#39;t have to. It&#39;s all my fault and please forgive me.&quot;, &quot;redemption&quot;)</tw-passagedata><tw-passagedata pid="32" name="depression-reply" tags="" position="757,1804.5" size="100,100">(link-goto: &quot;continue&quot;, &quot;immature-ending&quot;)</tw-passagedata><tw-passagedata pid="33" name="breakup-early" tags="" position="324,1803.5" size="100,100">Emma: Do you really love me?
 You: Yeah! I wouldn&#39;t be apologizing if I didn&#39;t!
 Emma: Well then why did we have our conversation the way we did last night? (if: $cry is 1)[Why did you make me cry in the first place?](else: $fight is 1 or $big_fight)[Why did we have to fight in the first place?]
 You: Why are you blaming me alone about this?
@@ -475,7 +480,7 @@ You: I want the same thing.
 Emma: I know I haven&#39;t been very clear about things recently, but I just want you to be patient with me.
 
 (link-goto: &quot;You: Do you think you can clarify?&quot;, &quot;avoid-answer&quot;)
-(link-goto: &quot;You: It&#39;s fine. I still love you.&quot;, &quot;other-day-confession&quot;)</tw-passagedata><tw-passagedata pid="36" name="avoid-answer" tags="" position="432,1895.5" size="100,100">Emma breaks into tears. You don&#39;t know what to do. She takes a moment to collect her words. Meanwhile, you sit next to her, and you give her a side hug.
+(link-goto: &quot;You: It&#39;s fine. I still love you.&quot;, &quot;other-day-confession&quot;)</tw-passagedata><tw-passagedata pid="36" name="avoid-answer" tags="" position="432,1931.5" size="100,100">Emma breaks into tears. You don&#39;t know what to do. She takes a moment to collect her words. Meanwhile, you sit next to her, and you give her a side hug.
 
 Emma: Why is this happening to us? I love you and I&#39;m sure you&#39;re honest about loving me, but I just wanna be happy with you
 You: I want the same thing.
@@ -484,7 +489,9 @@ You: Do you think you can clarify?
 Emma: I can&#39;t now. I don&#39;t feel strong enough.
 You: Ok, don&#39;t worry about it.
 
-(link-goto: &quot;End dinner.&quot;, &quot;other-day-confession&quot;)</tw-passagedata><tw-passagedata pid="37" name="other-day-confession" tags="" position="762,1948.5" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+(link-goto: &quot;End dinner.&quot;, &quot;other-day-confession&quot;)</tw-passagedata><tw-passagedata pid="37" name="other-day-confession" tags="" position="762,1948.5" size="100,100">(link-goto: &quot;continue&quot;, &quot;immature-ending&quot;)</tw-passagedata><tw-passagedata pid="38" name="immature-ending" tags="" position="740,1638.5" size="100,100">This is the current ending point of the story. After this point, Emma and you have to talk about what depression means (if she has already told you). Following that, deprending on the way you handle it, you two will have to deal with a couple of scenarios together.
+
+The story is not intended to have a &quot;happily ever after&quot; ending, but more of learning about the challenges that fighting depression brings.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
