@@ -33,10 +33,12 @@ a {
   color: #212529;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  text-decoration: none;
 }
 
 a:focus, a:hover {
-  color: #0085A1;
+  text-decoration: none;
+  color: #FF8B62;
 }
 
 blockquote {
@@ -317,4 +319,35 @@ blockquote {
   #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
     color: #0085A1;
   }
+}
+
+.item-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.item-content:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.item-title {
+  font-size: 2rem;
+  font-family: 'Chivo', sans-serif;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.item-description {
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.2rem;
 }
