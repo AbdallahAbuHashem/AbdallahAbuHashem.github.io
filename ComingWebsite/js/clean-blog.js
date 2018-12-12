@@ -12,8 +12,15 @@ var headerHeight = 0;
     $(this).removeClass("floating-label-form-group-with-focus");
   });
 
-    
-    document.getElementById("main-container").style.marginTop = document.getElementById("mainNav").clientHeight + "px";
+    if (window.innerWidth > 768) {
+      document.getElementById("header-container").style.marginTop = document.getElementById("mainNav").clientHeight + 60 + "px";
+      document.getElementById("portfolio").style.marginTop = 110 + "px";
+      document.getElementById("portfolio").style.paddingTop = 80 + "px";
+    } else {
+      document.getElementById("header-container").style.marginTop = document.getElementById("mainNav").clientHeight + 15 + "px";
+      document.getElementById("portfolio").style.marginTop = 55 + "px";
+      document.getElementById("portfolio").style.paddingTop = 45 + "px";
+    }
   //primary navigation slide-in effect
     headerHeight = $('#mainNav').height();
     $(window).on('scroll', {
@@ -40,4 +47,16 @@ function toggleMenu() {
     } else { //If the menu is closed
         $('#mainNav').addClass('is-fixed menu-on');
     }    
+}
+
+function adjustSpaces() {
+  if (window.innerWidth > 768) {
+      document.getElementById("header-container").style.marginTop = document.getElementById("mainNav").clientHeight + 60 + "px";
+      document.getElementById("portfolio").style.marginTop = 110 + "px";
+      document.getElementById("portfolio").style.paddingTop = 80 + "px";
+    } else {
+      document.getElementById("header-container").style.marginTop = document.getElementById("mainNav").clientHeight + 15 + "px";
+      document.getElementById("portfolio").style.marginTop = 55 + "px";
+      document.getElementById("portfolio").style.paddingTop = 45 + "px";
+    }
 }

@@ -38,7 +38,7 @@ a {
 
 a:focus, a:hover {
   text-decoration: none;
-  color: #FF8B62;
+  color: currentColor;
 }
 
 blockquote {
@@ -67,6 +67,8 @@ blockquote {
     background-position: 0 0.96em;
     background-size: 8.3px 4px;
     color: #FF8B62;
+    -webkit-transition: border 0.1s, color 0.3s, background-image 0.3s; /* Safari */
+    transition: border 0.1s, color 0.3s, background-image 0.3s;
 }
 
 .selected {
@@ -75,6 +77,19 @@ blockquote {
     font-size: 1.7rem;
     border-bottom: 3px solid currentColor;
     border-radius: 2px;
+}
+
+.navbaritem:hover {
+  color: #4E4E4E;
+  background-image: none;
+  border-bottom: 3px solid currentColor;
+  border-radius: 2px;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbaritem {
+    margin-bottom: 14px;
+  }
 }
 
 .navbar-toggler {
@@ -117,12 +132,11 @@ blockquote {
     font-size: 3rem;
     font-family: 'Chivo', sans-serif;
     font-weight: bold;
-    margin-bottom: 8px;
 }
 
 #description {
     font-family: 'Comfortaa', cursive;
-    font-size: 1.8rem;
+    font-size: 1.8pt;
 }
 
 @media only screen and (min-width: 100px) {
@@ -139,31 +153,51 @@ blockquote {
   }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (max-width: 767px) {
   #name {
-    font-size: 3rem;
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #name {
+    font-size: 2rem;
   }
     
   #description {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
     
   .navbaritem, .selected {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #name {
+    font-size: 2.3rem;
+  }
+    
+  #description {
+    font-size: 1.5rem;
+  }
+    
+  .navbaritem, .selected {
+    font-size: 1.5rem;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   #name {
-    font-size: 4rem;
+    font-size: 3vw;
   }
     
   #description {
-    font-size: 2rem;
+    font-size: 1.8vw;
   }
     
   .navbaritem, .selected {
-    font-size: 2.05rem;
+    font-size: 1.8vw;
   }
 }
 
@@ -178,14 +212,14 @@ blockquote {
 }
 
 #portfolio {
-    background-color: #FAE6DF;
+    background-color: #ffe7de;
     padding-top: 45px;
     padding-bottom: 30px;
     margin-top: 55px
 }
 
 .rightcenter, .leftcenter {
-    height: 25vw;
+    height: 20vw;
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5);
 }
 
@@ -200,7 +234,13 @@ blockquote {
 }
 
 .midItem {
+    margin-top: 110px;
+}
+
+@media only screen and (max-width: 1150px) {
+  .midItem {
     margin-top: 50px;
+}
 }
 
 #item1 {
@@ -327,7 +367,7 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   opacity: 0;
   transition: visibility 0s, opacity 0.5s ease;
   flex-direction: column;
@@ -335,7 +375,9 @@ blockquote {
   padding-right: 10%;
 }
 
-.item-content:hover {
+.item-content:hover,
+.item-content:active,
+.item-content:focus {
   visibility: visible;
   opacity: 1;
 }
@@ -350,4 +392,34 @@ blockquote {
 .item-description {
   font-family: 'Comfortaa', cursive;
   font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 400px) {
+  .item-title {
+    font-size: 1.7rem;
+  }
+
+  .item-description {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .item-title {
+    font-size: 1.7rem;
+  }
+
+  .item-description {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .item-title {
+    font-size: 2rem;
+  }
+
+  .item-description {
+    font-size: 1.2rem;
+  }
 }
