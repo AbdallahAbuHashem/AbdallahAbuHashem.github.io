@@ -52,7 +52,7 @@ blockquote {
 }
 
 .navbaritem {
-    font-family: 'Comfortaa-light', cursive;
+    font-family: 'Comfortaa', 'Chivo', sans-serif;
     font-size: 1.2rem;
     color: #FF8B62;
 /*    border-bottom: 3px dotted currentColor;*/
@@ -66,7 +66,7 @@ blockquote {
 
 .selected {
     color: #4E4E4E;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa', 'Chivo', sans-serif;
     font-size: 1.2rem;
     border-bottom: 3px solid currentColor;
     border-radius: 2px;
@@ -136,7 +136,7 @@ blockquote {
 }
 
 .description {
-    font-family: 'Comfortaa-light', cursive;
+    font-family: 'Comfortaa', 'Chivo', sans-serif;
     font-size: 1.4rem;
 }
 
@@ -383,12 +383,12 @@ blockquote {
 }
 
 .item-description {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', 'Chivo', sans-serif;
   font-size: 1.2rem;
 }
 
 .body-font {
-  font-family: 'Comfortaa-light', cursive;
+  font-family: 'Comfortaa', 'Chivo', sans-serif;
   font-size: 0.6em;
 }
 
