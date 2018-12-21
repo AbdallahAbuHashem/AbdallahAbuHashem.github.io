@@ -43,8 +43,8 @@ blockquote {
 
 .navbar {
     padding: 0px;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    padding-bottom: 0.7rem;
+    padding-top: 0.7rem;
     justify-content: flex-end;
 }
 
@@ -54,7 +54,7 @@ blockquote {
 
 .navbaritem {
     font-family: 'Comfortaa-light', cursive;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     color: #FF8B62;
 /*    border-bottom: 3px dotted currentColor;*/
     background-repeat: repeat-x;
@@ -68,7 +68,7 @@ blockquote {
 .selected {
     color: #4E4E4E;
     font-family: 'Comfortaa', cursive;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     border-bottom: 3px solid currentColor;
     border-radius: 2px;
 }
@@ -86,6 +86,12 @@ blockquote {
   }
 }
 
+#navbarResponsive {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .navbar-toggler {
     border: 0px;
 }
@@ -94,17 +100,6 @@ blockquote {
   font-size: 36px;
   font-weight: 700;
   margin-top: 60px;
-}
-
-.caption {
-  font-size: 14px;
-  font-style: italic;
-  display: block;
-  margin: 0;
-  padding: 10px;
-  text-align: center;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
 }
 
 .container {
@@ -116,34 +111,47 @@ blockquote {
     padding: 0px;
 }
 
-#myExcerpt {
+.row {
+    margin: 0px;
+}
+
+.content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-content {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-family: 'Chivo', sans-serif;
     font-weight: bold;
 }
 
-#description {
+.description {
     font-family: 'Comfortaa-light', cursive;
-    font-size: 1.8pt;
+    font-size: 1.4rem;
 }
 
 @media only screen and (min-width: 100px) {
   .title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
-  #description {
-    font-size: 1.1rem;
+  .description {
+    font-size: 0.8rem;
   }
     
   .navbaritem, .selected {
-    font-size: 1.15rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -155,43 +163,29 @@ blockquote {
 
 @media only screen and (min-width: 768px) {
   .title {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
     
-  #description {
-    font-size: 1.3rem;
+  .description {
+    font-size: 0.9rem;
   }
     
   .navbaritem, .selected {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
   }
 }
 
 @media only screen and (min-width: 900px) {
   .title {
-    font-size: 2.3rem;
-  }
-    
-  #description {
-    font-size: 1.5rem;
-  }
-    
-  .navbaritem, .selected {
-    font-size: 1.5rem;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .title {
-    font-size: 3rem;
-  }
-    
-  #description {
     font-size: 1.8rem;
   }
     
+  .description {
+    font-size: 1.1rem;
+  }
+    
   .navbaritem, .selected {
-    font-size: 1.8rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -214,17 +208,23 @@ blockquote {
 
 .rightcenter, .leftcenter {
     height: 20vw;
+    max-height: 300px;
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media only screen and (max-width: 767px) {
   .rightcenter, .leftcenter {
-    height: 90vw;
+    height: 27vw;
   }
 }
 
-.row {
-    margin: 0px;
+@media only screen and (max-width: 575px) {
+  .rightcenter, .leftcenter {
+    height: 60vw;
+  }
 }
 
 .midItem {
@@ -234,7 +234,7 @@ blockquote {
 @media only screen and (max-width: 1150px) {
   .midItem {
     margin-top: 50px;
-}
+  }
 }
 
 #item1 {
@@ -242,7 +242,7 @@ blockquote {
     background-size: cover;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 575px) {
   #item1 {
     background: url(../img/TitleVII_Sqr.png) no-repeat center center;
       background-size: cover;
@@ -254,7 +254,7 @@ blockquote {
     background-size: cover;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 575px) {
   #item2 {
     background: url(../img/FakeNews_Sqr.png) no-repeat center center;
       background-size: cover;
@@ -266,7 +266,7 @@ blockquote {
     background-size: cover;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 575px) {
   #item3 {
     background: url(../img/Polytone_Sqr.png) no-repeat center center;
       background-size: cover;
@@ -390,7 +390,7 @@ blockquote {
 
 .body-font {
   font-family: 'Comfortaa-light', cursive;
-  font-size: 0.8em;
+  font-size: 0.6em;
 }
 
 @media only screen and (min-width: 400px) {
@@ -403,7 +403,7 @@ blockquote {
   }
 
   .body-font {
-    font-size: 0.9em;
+    font-size: 0.7em;
   }
 }
 
@@ -417,7 +417,7 @@ blockquote {
   }
 
   .body-font {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 }
 
@@ -431,7 +431,7 @@ blockquote {
   }
 
   .body-font {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 
@@ -441,7 +441,7 @@ blockquote {
 
 #about-img {
   float: right;
-  width: 40%;
+  width: 30%;
   max-width: 400px;
   min-width: 100px;
   padding: 0 0 1em 1.5em;
@@ -450,7 +450,7 @@ blockquote {
 .button {
   font-family: 'Chivo', sans-serif;
   padding: 0.5em 1em 0.5em 1em;
-  border-width: 6px;
+  border-width: 4px;
   border-color: #FF8B62;
   color: #FF8B62;
   border-style: solid;
@@ -461,7 +461,42 @@ blockquote {
 
 .button:hover {
   background-color: #FF8B62;
-  color: #4E4E4E;
+  color: #fff;
+}
+
+.icon {
+  display: flex;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-color: #FF8B62;
+}
+.icon svg {
+  width: 26px;
+  max-height: 26px;
+}
+
+@media only screen and (max-width: 320px) {
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  .icon svg {
+    width: 16px;
+    max-height: 16px;
+  }
+}
+
+.fg-path {
+  fill: #FF8B62;
+}
+
+.icon:hover {
+  background-color: #FF8B62;
 }
 
 #likes {

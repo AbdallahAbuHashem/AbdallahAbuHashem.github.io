@@ -13,15 +13,15 @@ var headerHeight = 0;
   });
 
     if (window.innerWidth > 767) {
-      document.getElementById("header-container").style.marginTop = document.getElementById("mainNav").clientHeight + 60 + "px";
+      document.getElementById("header-container").style.marginTop = document.getElementById("mainNav").clientHeight + 50 + "px";
       if (document.getElementById("portfolio")) {
-        document.getElementById("portfolio").style.marginTop = 110 + "px";
-        document.getElementById("portfolio").style.paddingTop = 80 + "px";
+        document.getElementById("portfolio").style.marginTop = 25 + "px";
+        document.getElementById("portfolio").style.paddingTop = 45 + "px";
       }
     } else {
-      document.getElementById("header-container").style.marginTop = document.getElementById("mainNav").clientHeight + 15 + "px";
+      document.getElementById("header-container").style.marginTop = document.getElementById("mainNav").clientHeight + 12 + "px";
       if (document.getElementById("portfolio")) {
-        document.getElementById("portfolio").style.marginTop = 55 + "px";
+        document.getElementById("portfolio").style.marginTop = 25 + "px";
         document.getElementById("portfolio").style.paddingTop = 45 + "px";
       }
     }
@@ -55,16 +55,42 @@ function toggleMenu() {
 
 function adjustSpaces() {
   if (window.innerWidth > 767) {
-      document.getElementById("header-container").style.marginTop = document.getElementById("mainNav").clientHeight + 60 + "px";
+      document.getElementById("header-container").style.marginTop = document.getElementById("mainNav").clientHeight + 50 + "px";
       if (document.getElementById("portfolio")) {
-        document.getElementById("portfolio").style.marginTop = 110 + "px";
-        document.getElementById("portfolio").style.paddingTop = 80 + "px";
+        document.getElementById("portfolio").style.marginTop = 25 + "px";
+        document.getElementById("portfolio").style.paddingTop = 45 + "px";
       }
     } else {
-      document.getElementById("header-container").style.marginTop = document.getElementById("mainNav").clientHeight + 15 + "px";
+      document.getElementById("header-container").style.marginTop = document.getElementById("mainNav").clientHeight + 12 + "px";
       if (document.getElementById("portfolio")) {
-        document.getElementById("portfolio").style.marginTop = 55 + "px";
+        document.getElementById("portfolio").style.marginTop = 25 + "px";
         document.getElementById("portfolio").style.paddingTop = 45 + "px";
       }
     }
+}
+
+function changeColor(element, status) {
+  let paths = element.getElementsByTagName("svg")[0].getElementsByTagName("g")[0].getElementsByTagName("path");
+  for (path of paths) {
+    if (path.className.baseVal.includes("fg-path")) {
+      if (status === 1)
+      {
+        path.style.fill = "#fff";
+      }
+      else
+      {
+        path.style.fill = "#FF8B62";
+      }
+    } else {
+      if (status === 1)
+      {
+        path.style.fill = "#FF8B62";
+      }
+      else
+      {
+        path.style.fill = "#fff";
+      }
+    }
+    console.log(path.className);
+  }
 }
