@@ -10,11 +10,6 @@ body {
   font-family: 'Lora', 'Times New Roman', serif;
 }
 
-p {
-  line-height: 1.5;
-  margin: 30px 0;
-}
-
 p a {
   text-decoration: underline;
 }
@@ -58,7 +53,7 @@ blockquote {
 }
 
 .navbaritem {
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa-light', cursive;
     font-size: 1.7rem;
     color: #FF8B62;
 /*    border-bottom: 3px dotted currentColor;*/
@@ -66,7 +61,6 @@ blockquote {
     background-image: url("../img/Oval.png");
     background-position: 0 0.96em;
     background-size: 8.3px 4px;
-    color: #FF8B62;
     -webkit-transition: border 0.1s, color 0.3s, background-image 0.3s; /* Safari */
     transition: border 0.1s, color 0.3s, background-image 0.3s;
 }
@@ -128,20 +122,20 @@ blockquote {
     justify-content: center;
 }
 
-#name {
+.title {
     font-size: 3rem;
     font-family: 'Chivo', sans-serif;
     font-weight: bold;
 }
 
 #description {
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa-light', cursive;
     font-size: 1.8pt;
 }
 
 @media only screen and (min-width: 100px) {
-  #name {
-    font-size: 2.4rem;
+  .title {
+    font-size: 1.8rem;
   }
 
   #description {
@@ -154,13 +148,13 @@ blockquote {
 }
 
 @media only screen and (max-width: 767px) {
-  #name {
+  .title {
     margin-top: 15px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  #name {
+  .title {
     font-size: 2rem;
   }
     
@@ -174,7 +168,7 @@ blockquote {
 }
 
 @media only screen and (min-width: 900px) {
-  #name {
+  .title {
     font-size: 2.3rem;
   }
     
@@ -188,16 +182,16 @@ blockquote {
 }
 
 @media only screen and (min-width: 1440px) {
-  #name {
-    font-size: 3vw;
+  .title {
+    font-size: 3rem;
   }
     
   #description {
-    font-size: 1.8vw;
+    font-size: 1.8rem;
   }
     
   .navbaritem, .selected {
-    font-size: 1.8vw;
+    font-size: 1.8rem;
   }
 }
 
@@ -394,6 +388,11 @@ blockquote {
   font-size: 1.2rem;
 }
 
+.body-font {
+  font-family: 'Comfortaa-light', cursive;
+  font-size: 0.8em;
+}
+
 @media only screen and (min-width: 400px) {
   .item-title {
     font-size: 1.7rem;
@@ -402,15 +401,23 @@ blockquote {
   .item-description {
     font-size: 1rem;
   }
+
+  .body-font {
+    font-size: 0.9em;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .item-title {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
 
   .item-description {
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .body-font {
+    font-size: 1em;
   }
 }
 
@@ -422,4 +429,41 @@ blockquote {
   .item-description {
     font-size: 1.2rem;
   }
+
+  .body-font {
+    font-size: 1.2em;
+  }
+}
+
+#pic {
+  margin: auto;
+}
+
+#about-img {
+  float: right;
+  width: 40%;
+  max-width: 400px;
+  min-width: 100px;
+  padding: 0 0 1em 1.5em;
+}
+
+.button {
+  font-family: 'Chivo', sans-serif;
+  padding: 0.5em 1em 0.5em 1em;
+  border-width: 6px;
+  border-color: #FF8B62;
+  color: #FF8B62;
+  border-style: solid;
+  text-decoration: none;
+  -webkit-transition: color 0.25s, background-color 0.25s; /* Safari */
+  transition: color 0.25s, background-color 0.25s;
+}
+
+.button:hover {
+  background-color: #FF8B62;
+  color: #4E4E4E;
+}
+
+#likes {
+  margin-top: 8px;
 }
