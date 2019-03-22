@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?f194zt');
-  src:  url('fonts/icomoon.eot?f194zt#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?f194zt') format('truetype'),
-    url('fonts/icomoon.woff?f194zt') format('woff'),
-    url('fonts/icomoon.svg?f194zt#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?kklp8');
+  src:  url('fonts/icomoon.eot?kklp8#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?kklp8') format('truetype'),
+    url('fonts/icomoon.woff?kklp8') format('woff'),
+    url('fonts/icomoon.svg?kklp8#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -102,7 +102,15 @@
 .icon-google2:before {
   content: "\f1a0";
 }
-
-.icon-heart:before{
-  content:"\f004";
+.icon-user:before {
+  content: "\e904";
+}
+.icon-eye:before {
+  content: "\e900";
+}
+.icon-pen-tool:before {
+  content: "\e902";
+}
+.icon-smartphone:before {
+  content: "\e903";
 }
